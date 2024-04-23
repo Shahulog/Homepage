@@ -4,13 +4,11 @@ import React, { useEffect, useState } from 'react';
 import ReactMarkDown from "react-markdown"
 import remarkGfm from 'remark-gfm';
 
-let timeoutId;
-const page = ({ params }) => {
+ const   Page = ({ params }) => {
   const [dataList, setDataList] = useState("");
   useEffect(() => {
     getData(params.id);
   }, []);
-  
 
   async function getData(id) {
     const response = await fetch(`/api/ymm4?id=` + id);
@@ -27,4 +25,4 @@ const page = ({ params }) => {
   );
 };
 
-export default page;
+export default Page;

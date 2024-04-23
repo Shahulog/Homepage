@@ -2,7 +2,7 @@ import fs from 'fs'
 import path from 'path'
 const dir = path.join(process.cwd(), 'public', 'ymm4','logs');
 
-export async function getData  (id)  {
+export const    getData =  async (id) => {
     
     try {
         // ファイルを同期的に読み込む

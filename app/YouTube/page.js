@@ -12,14 +12,14 @@ export default async function Page  ()  {
         <NavBar></NavBar>
         <div>
         <div className="w-24 h-24 relative">
-        <Image 
+        <Image className="Image"
           src={MyImage} 
           alt="my_img" 
           layout="fill" 
           objectFit="contain" // or 'cover' depending on your needs
         />
       </div>
-        <YouTube latestVideo={latestVideo}/>
+        {latestVideo && <YouTube latestVideo={latestVideo}/>}
         </div>
       </main>
       
