@@ -13,11 +13,11 @@ export default function RootLayout({ children }) {
     <html lang="ja">
       <body>
         <header>
-          <h1>Welcome to My Website</h1>
+          <h3>しゃふろぐ ─Shahu log─</h3>
         </header>
         <div className={inter.className}>{children}</div>
         <footer>
-          <p>Contact us at hello@example.com</p>
+          <p>Contact us at X <a href="https://twitter.com/Shahu_log">@Shahu_log</a></p>
         </footer>
       </body>
     </html>

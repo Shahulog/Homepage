@@ -2,13 +2,11 @@
 
 const YouTube = ({latestVideo}) => {
     return (  
-        <div>
+        <div  >
              {latestVideo && (
         <div>
           <h2>{latestVideo.title}</h2>
           <iframe
-            width="350"
-            height="560"
             src={`https://www.youtube.com/embed/${latestVideo.videoId}`}
             title={latestVideo.title}
             frameBorder="0"

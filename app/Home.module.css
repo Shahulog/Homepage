@@ -1,0 +1,27 @@
+/* MyComponent.module.css */
+.image {
+    width: 200px; /* 幅を指定 */
+    height: 100px; /* 高さを指定 */
+  }
+  @keyframes slideAndGrowFade {
+    0% {
+      transform: translateX(-50px) scale(0.5); /* Start from left and small */
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0) scale(1); /* End at normal position and size */
+      opacity: 1;
+    }
+  }
+  
+  .growAndFadeText {
+    display: inline-block; /* Allows transform to work properly */
+    animation: slideAndGrowFade 2s cubic-bezier(0.645, 0.045, 0.355, 1) forwards; /* Use cubic-bezier for easing */
+    font-family: 'Cursive', sans-serif;
+    font-size: 24px;
+    background: linear-gradient(45deg, #fafa30,#60fa30); /* More yellow, with a hint of green */
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; /* Makes the text color transparent to show the gradient */
+  }
+  

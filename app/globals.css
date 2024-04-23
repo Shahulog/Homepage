@@ -3,16 +3,15 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --foreground-rgb: 50, 50, 50; /* Darker text color for light mode */
+  --background-start-rgb: 169, 169, 169; /* Darker start for gradient */
+  --background-end-rgb: 169, 169, 169; /* Darker end for gradient */
 }
-
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --foreground-rgb: 235, 235, 235; /* Slightly lighter text color for dark mode */
+    --background-start-rgb: 25, 25, 25; /* Even darker start for gradient in dark mode */
+    --background-end-rgb: 75, 75, 75; /* Darker end for gradient in dark mode */
   }
 }
 
@@ -31,4 +30,111 @@ body {
     text-align: justify; /* テキストを均等に配置するスタイルに変更 */
     text-justify: distribute; /* テキストの均等分散を設定 */
   }
+}
+
+/* Change the color of all <a> tags */
+a {
+  color: #0070f3; /* Example: Change to your preferred color */
+  transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+/* Animation on hover */
+a:hover {
+  color: #ff4081; /* Example: Change to your preferred hover color */
+  animation: hoverAnimation 0.5s ease forwards;
+}
+
+@keyframes hoverAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1); /* Slightly larger */
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Markdown-specific styles */
+h1 {
+  color: var(--foreground-rgb);
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-size: 2.25rem; /* 36px if base font size is 16px */
+}
+
+h2 {
+  color: var(--foreground-rgb);
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.75rem; /* 28px */
+}
+
+h3 {
+  color: var(--foreground-rgb);
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem; /* 24px */
+}
+
+h4 {
+  color: var(--foreground-rgb);
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem; /* 20px */
+}
+
+h5 {
+  color: var(--foreground-rgb);
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-size: 1rem; /* 16px */
+}
+
+h6 {
+  color: var(--foreground-rgb);
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem; /* 14px */
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+ul, ol {
+  padding-left: 2rem;
+  margin-bottom: 1rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+blockquote {
+  border-left: 4px solid #ddd;
+  padding-left: 1rem;
+  color: #666;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 1rem;
+}
+
+code {
+  background-color: #f5f5f5;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-family: monospace;
+}
+
+pre {
+  background-color: #f5f5f5;
+  padding: 1rem;
+  overflow-x: auto;
+}
+
+pre code {
+  background-color: transparent;
+  padding: 0;
 }
