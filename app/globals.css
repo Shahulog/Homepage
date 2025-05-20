@@ -4,13 +4,13 @@
 
 :root {
   --foreground-rgb: 50, 50, 50; /* Darker text color for light mode */
-  --background-start-rgb: 169, 169, 169; /* Darker start for gradient */
-  --background-end-rgb: 169, 169, 169; /* Darker end for gradient */
+  --background-start-rgb: 235, 235, 235; /* Darker start for gradient */
+  --background-end-rgb: 235, 235, 235; /* Darker end for gradient */
 }
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 235, 235, 235; /* Slightly lighter text color for dark mode */
-    --background-start-rgb: 25, 25, 25; /* Even darker start for gradient in dark mode */
+    --background-start-rgb: 75, 75, 75; /* Even darker start for gradient in dark mode */
     --background-end-rgb: 75, 75, 75; /* Darker end for gradient in dark mode */
   }
 }

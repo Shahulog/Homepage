@@ -2,7 +2,7 @@ import { formatPublishedAt, getLogs } from "../util/ymm4";
 import NavBar from '@/app/components/NavBar';
 import Link from "next/link";
  export default async function   Page () {
-  const logs = undefined
+  const logs = await getLogs()
  
   return (
     <main>
